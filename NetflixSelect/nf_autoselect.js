@@ -182,14 +182,14 @@ let panel = {
 
   
   if (status==2) {
-    panel['content'] = `完整支持Netflix, 节点: ${rootName}`
+    panel['content'] = `完整支持Netflix | ${rootName}`
     panel['style'] = 'good'
   } else if (status==1) {
-    panel['content'] = `解锁自制内容, 节点: ${rootName}`
+    panel['content'] = `解锁自制内容 | ${rootName}`
     panel['style'] = 'info'
   } else {
     $surge.setSelectGroupPolicy(netflixGroup, first);
-    panel['content'] = `不支持Netflix, 节点: ${rootName}`
+    panel['content'] = `不支持Netflix | ${rootName}`
     panel['style'] = 'alert'
     return
   }
