@@ -174,7 +174,7 @@ while(allGroup.includes(rootName)==true){
    * 面板显示
    */
 
-let title = "Netflix解锁检测";
+let title = "Netflix 解锁检测";
 
 let panel = {
   title: `${title}`,
@@ -182,14 +182,14 @@ let panel = {
 
   
   if (status==2) {
-    panel['content'] = `完整支持Netflix，区域：${rootName}`
+    panel['content'] = `完整支持Netflix::${rootName}`
     panel['style'] = 'good'
   } else if (status==1) {
-    panel['content'] = `解锁自制内容，区域：${rootName}`
+    panel['content'] = `解锁自制内容::${rootName}`
     panel['style'] = 'info'
   } else {
     $surge.setSelectGroupPolicy(netflixGroup, first);
-    panel['content'] = `不支持Netflix，区域：${rootName}`
+    panel['content'] = `不支持Netflix::${rootName}`
     panel['style'] = 'alert'
     return
   }
