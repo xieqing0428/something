@@ -177,21 +177,21 @@ while(allGroup.includes(rootName)==true){
 
 
 
-let title = "Disney+解锁检测";
+let title = "Disney+ 解锁检测";
 
 let panel = {
   title: `${title}`,
 }
   
   if (status==1) {
-    panel['content'] = `完整支持Disney+，区域：${rootName}`
+    panel['content'] = `完整支持Disney+::${rootName}`
     panel['style'] = 'good'
   } else if (status==2) {
-    panel['content'] = `即将登陆，敬请期待，区域：${rootName}`
+    panel['content'] = `即将登陆，敬请期待::${rootName}`
     panel['style'] = 'info'
   } else {
     $surge.setSelectGroupPolicy(disneyGroup, first);
-    panel['content'] = `不支持Disney+，区域：${rootName}`
+    panel['content'] = `不支持Disney+::${rootName}`
     panel['style'] = 'alert'
     return
   }
