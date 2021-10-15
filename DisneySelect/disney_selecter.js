@@ -185,14 +185,17 @@ let panel = {
   
   if (status==1) {
     panel['content'] = `完整支持Disney+, 节点: ${rootName}`
-    panel['icon'] = checkmark.circle
+    panel['icon'] = params.icon1
+    panel['icon-color'] = params.color1
   } else if (status==2) {
     panel['content'] = `即将登陆, 敬请期待, 节点: ${rootName}`
-    panel['icon'] = cursorarrow.click.badge.clock
+    panel['icon'] = params.icon2
+    panel['icon-color'] = params.color2
   } else {
     $surge.setSelectGroupPolicy(disneyGroup, first);
     panel['content'] = `不支持Disney+, 节点: ${rootName}`
-    panel['icon'] = xmark.shield
+    panel['icon'] = params.icon3
+    panel['icon-color'] = params.color3
     return
   }
 
