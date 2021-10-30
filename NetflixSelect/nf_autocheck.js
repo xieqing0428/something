@@ -3,7 +3,6 @@
  1:本脚本修改自 @Helge_0x00 
  2:本脚本用于遍历Netflix策略组，以获取节点列表
  3:本脚本与姊妹脚本nf_autoselect相互依赖，你应当优先执行一次panel脚本，且必须手动运行一次本脚本以获取节点列表
- 4:你可以通过配置cron表达式以修改执行频率
 */
 
 const FILM_ID = 81215567
@@ -47,15 +46,15 @@ if(status <0) {
 }
 //填充数据
 status = newStatus
+console.log("检测结果："+proxyName[i]+" | "+statusName(status))
+
 if(status===2){
 	if(fullUnlock.includes(proxyName[i])==false){
 	fullUnlock.push(proxyName[i])
-	console.log("全解锁: "+proxyName[i]+" | "+status)
 		}
 	}else if(status===1){
 		if(onlyOriginal.includes(proxyName[i])==false){
 		onlyOriginal.push(proxyName[i])
-		console.log("仅自制: "+proxyName[i]+" | "+status)
 		}
 	}
   }
@@ -76,6 +75,7 @@ for (let i = 0; i < onlyOriginal.length; ++i){
 // 创建持久化数据
 $persistentStore.write(fullUnlock.toString(),"fullUnlockNetflix");
 $persistentStore.write(onlyOriginal.toString(),"onlyOriginalNetflix")
+
 
 //打印测试结果
 console.log("全解锁:"+fullUnlock.sort())
@@ -165,5 +165,13 @@ function timeout(delay = 5000) {
       reject('Timeout')
     }, delay)
   })
+}
+
+function statusName(status) {
+    return status==2 ? "全解锁"
+         : status==1 ? "仅自制"
+         : status==0 ? "不解锁"
+         : status==-1 ? "检测超时"
+			: "检测失败";
 }
 
