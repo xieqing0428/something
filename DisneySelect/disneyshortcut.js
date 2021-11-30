@@ -154,7 +154,7 @@ const STATUS_ERROR = -2
       info = "该策略组暂无可供支援的节点"
     }
 
-    $notification.post("Disney檢測", info, "")
+    $notification.post("Disney检测", info, "")
 
 
     $done()
