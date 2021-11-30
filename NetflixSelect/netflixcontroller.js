@@ -180,17 +180,14 @@ let params = getParams($argument)
 
   if (fullUnlock.includes(rootName)) {
     panel['content'] = `完整支持Netflix | ${rootName}`
-    panel['icon'] = params.icon1
-    panel['icon-color'] = params.color1
+    panel['style'] = 'good'
   } else if (onlyOriginal.includes(rootName)) {
     panel['content'] = `解锁自制内容 | ${data[rootName]}`
-    panel['icon'] = params.icon2
-    panel['icon-color'] = params.color2
+    panel['style'] = 'info'
   } else {
     console.log("test")
     panel['content'] = `不支持Netflix | ${data[rootName]}`
-    panel['icon'] = params.icon3
-    panel['icon-color'] = params.color3
+    panel['style'] = 'alert'
   }
 
 
