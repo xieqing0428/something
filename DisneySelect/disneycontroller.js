@@ -170,11 +170,11 @@ const STATUS_ERROR = -2
       panel['icon'] = params.icon1
       panel['icon-color'] = params.color1
     } else if (statusData[rootName] == 2) {
-      panel['content'] = `即将登陆 敬请期待 | ${regData[rootName]}`
+      panel['content'] = `即将登陆 敬请期待 | ${rootName}`
       panel['icon'] = params.icon2
       panel['icon-color'] = params.color2
     } else {
-      panel['content'] = `不支持Disney+ | ${regData[rootName]}`
+      panel['content'] = `不支持Disney+ | ${rootName}`
       panel['icon'] = params.icon3
       panel['icon-color'] = params.color3
     }
