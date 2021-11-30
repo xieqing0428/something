@@ -161,7 +161,7 @@ const AREA_TEST_FILM_ID = 80018499
       info = "该策略组暂无可供支援的节点"
     }
 
-    $notification.post("Netflix檢測", info, "")
+    $notification.post("Netflix检测", info, "")
 
     $done()
 
