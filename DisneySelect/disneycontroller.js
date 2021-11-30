@@ -159,7 +159,7 @@ const STATUS_ERROR = -2
        * 面板显示
        */
 
-    let title = "Disney+ 解锁检测" + rootName;
+    let title = "Disney+ 解锁检测";
 
     let panel = {
       title: `${title}`,
