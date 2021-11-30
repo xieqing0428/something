@@ -159,22 +159,22 @@ const STATUS_ERROR = -2
        * 面板显示
        */
 
-    let title = "Disney+ ➟ " + rootName;
+    let title = "Disney+ 解锁检测" + rootName;
 
     let panel = {
       title: `${title}`,
     }
 
     if (statusData[rootName] == 1) {
-      panel['content'] = `支援Disney+ 地区：${regData[rootName]}`
+      panel['content'] = `完整支持Disney+ | ${rootName}`
       panel['icon'] = params.icon1
       panel['icon-color'] = params.color1
     } else if (statusData[rootName] == 2) {
-      panel['content'] = `即将登陆 敬请期待～`
+      panel['content'] = `即将登陆 敬请期待 | ${regData[rootName]}`
       panel['icon'] = params.icon2
       panel['icon-color'] = params.color2
     } else {
-      panel['content'] = `暂无可供支援的节点呢～`
+      panel['content'] = `不支持Disney+ | ${regData[rootName]}`
       panel['icon'] = params.icon3
       panel['icon-color'] = params.color3
     }
