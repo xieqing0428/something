@@ -172,23 +172,23 @@ let params = getParams($argument)
    * 面板显示
    */
 
-  let title = "Netflix ➟ " + rootName;
+  let title = "Netflix 解锁检测";
 
   let panel = {
     title: `${title}`,
   }
 
   if (fullUnlock.includes(rootName)) {
-    panel['content'] = `完整支援Netflix  地区：${data[rootName]}`
+    panel['content'] = `完整支持Netflix | ${rootName}`
     panel['icon'] = params.icon1
     panel['icon-color'] = params.color1
   } else if (onlyOriginal.includes(rootName)) {
-    panel['content'] = `仅支援自制内容～ `
+    panel['content'] = `解锁自制内容 | ${data[rootName]}`
     panel['icon'] = params.icon2
     panel['icon-color'] = params.color2
   } else {
     console.log("test")
-    panel['content'] = `没有可供支援的节点呢～`
+    panel['content'] = `不支持Netflix | ${data[rootName]}`
     panel['icon'] = params.icon3
     panel['icon-color'] = params.color3
   }
